@@ -37,8 +37,8 @@ services:
     environment:
       - DB_HOST=db_seafile
       - DB_ROOT_PASSWD=db_dev
-      - SEAFILE_ADMIN_EMAIL=your@email.com
-      - SEAFILE_ADMIN_PASSWORD=yourP4ssW0rd
+      - SEAFILE_ADMIN_EMAIL=me@exaample.com
+      - SEAFILE_ADMIN_PASSWORD=asecret
       - SEAFILE_SERVER_HOSTNAME=127.0.0.1:8022
       - SEAFILE_SERVER_LETSENCRYPT=false
       - TIME_ZONE=Etc/UTC
