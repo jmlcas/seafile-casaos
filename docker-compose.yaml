@@ -41,7 +41,7 @@ services:
       - SEAFILE_ADMIN_PASSWORD=asecret
       - SEAFILE_SERVER_HOSTNAME=127.0.0.1:8022
       - SEAFILE_SERVER_LETSENCRYPT=false
-      - TIME_ZONE=Etc/UTC
+      - TIME_ZONE=Europe/Madrid
     image: seafileltd/seafile-mc:latest
     ports:
       - target: 80
@@ -59,9 +59,9 @@ networks:
   seafile-net:
     name: seafile_server_seafile-net
 x-casaos:
-  author: Cloudrack.ca
-  category: Cloudrack.ca
-  icon: https://cdn.imgbin.com/17/6/6/imgbin-seafile-file-hosting-service-cloud-storage-computer-software-installation-raspberries-kKrnZZMLsHAFpQGRC0DLgXXdU.jpg
+  author: Labarta
+  category: File Sync
+  icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/seafile.png
   index: /
   port_map: "8022"
   scheme: https
@@ -69,13 +69,10 @@ x-casaos:
   title:
     custom: Seafile
   description:
-    en_us: Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface. Seafile's functionality is similar to other popular file hosting services such as Dropbox and Google Drive. The primary difference between Seafile and Dropbox/Google Drive is that Seafile is a self-hosted file sharing solution for private cloud applications. In private clouds, storage space and client connection limits are determined exclusively by the users own infrastructure and settings rather than the terms and conditions of a cloud service provider. Additionally, organizations, whose data privacy policies bar them from using public cloud services can draw on Seafile to build a file sharing system of their own.
+    en_us: Seafile is an open-source, cross-platform file-hosting software system.
   tagline:
-    en_us: Seafile is an open-source file sync and share solution designed for high reliability, performance, and productivity. It allows users to sync, share, and collaborate across devices and teams. Seafile provides features similar to Dropbox, Google Drive, and Office 365, while allowing users to host the server on their own hardware. 
+    en_us: Seafile is an open-source file sync and share solution designed for high reliability, performance, and productivity. 
   architectures:
     - amd64
     - arm64
-    - ppc64le
-    - s390x
-    - "386"
-    - arm
+
