@@ -12,7 +12,7 @@ services:
         source: /opt/seafile-mysql/db
         target: /var/lib/mysql
     networks:
-      - seafile-net
+      - db_seafile
     privileged: false
   memcached:
     container_name: seafile-memcached
@@ -23,7 +23,7 @@ services:
     image: memcached:1.6.18
     restart: unless-stopped
     networks:
-      - seafile-net
+      - db_seafile
     privileged: false
   seafile:
     container_name: seafile
@@ -53,18 +53,18 @@ services:
         source: /DATA/AppData/Seafile/opt/seafile-data
         target: /shared
     networks:
-      - seafile-net
+      - db_seafile
     privileged: false
 networks:
-  seafile-net:
-    name: seafile_server_seafile-net
+  db_seafile:
+    name: db_seafile
 x-casaos:
   author: Labarta
   category: File Sync
   icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/seafile.png
   index: /
   port_map: "8022"
-  scheme: https
+  scheme: http
   store_app_id: seafile_server
   title:
     custom: Seafile
